@@ -1,0 +1,20 @@
+<%= form_for @message do |f| %>
+<p>
+  <%= f.label :title %>
+  <%= f.text_field :title, :required => true %>
+</p>
+
+<p>
+  <%= f.label :category_name %>
+  <%= f.select :category_name, ["News", "Resources", "Help"], :required => true %>
+</p>
+
+<p>
+  <%= f.label :content %>
+  <%= f.text_area :content, :require => true %>
+</p>
+
+<p>
+  <%= f.submit %>
+</p>
+<% end %>

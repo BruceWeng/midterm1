@@ -1,0 +1,10 @@
+<h2><%= @messages.title %></h2>
+
+<%= simple_format @messages.content %>
+
+<h2>Comments list</h2>
+
+<% @messages.comments.each do |comment| %>
+  <p><%= simple_format comment.content %> at <%= comment.created_at.to_s(:short) %></p>
+<% end %>
+<%= link_to 'Back to index', messages_path %>
