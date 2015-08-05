@@ -5,6 +5,7 @@ class MessagesController < ApplicationController
 
   def show
     @messages = Message.find(params[:id])
+    @comment = Comment.new
   end
 
   def new

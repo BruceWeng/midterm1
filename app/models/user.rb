@@ -6,4 +6,8 @@ class User < ActiveRecord::Base
 
   has_many :messages
   has_many :comments
+
+  def display_name
+    self.email.split("@").first
+  end
 end
