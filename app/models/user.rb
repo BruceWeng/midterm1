@@ -10,5 +10,6 @@ class User < ActiveRecord::Base
   def display_name
     self.email.split("@").first
   end
-
+# hello
+# hello2
 end
