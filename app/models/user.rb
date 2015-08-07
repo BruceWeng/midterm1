@@ -11,4 +11,5 @@ class User < ActiveRecord::Base
     self.email.split("@").first
   end
 #test1
+#test2
 end
