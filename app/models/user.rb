@@ -18,4 +18,5 @@ class User < ActiveRecord::Base
 #test2-2
 #test2-3
 #test2 rebase 1
+#test2 rebase 2
 end
