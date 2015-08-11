@@ -16,10 +16,22 @@
 <% end %>
 <% @message.comments.each do |comment| %>
 
-  <p><%= simple_format comment.content %> at <%= comment.created_at.to_s(:short) %> by <%= comment.user.display_name %>
+  <p><div class="t-comment-<%= comment.id %>"> <%= simple_format comment.content %> </div>
+  at <%= comment.created_at.to_s(:short) %> by <%= comment.user.display_name %>
   </p>
   <% if comment.user == current_user %>
     <%= link_to "Delete", message_comment_path(@message, comment), :method => :delete, :data => {:confirm => "Are u sure?"} %>
+    <%= link_to "Edit", edit_message_comment_path(@message, comment), :remote=>true, :class=>"btn btn-warning" %>
     <% end %>
 <% end %>
 <%= link_to 'Back to index', messages_path %>
+
+
+<script>
+
+
+
+
+</script>
+
+

@@ -1,0 +1,6 @@
+
+
+$(".t-comment-<%= @comment.id %>").html("<%= j render(:partial=>'comments/form',:locals=>{:message=>@message,:comment=>@comment}) %>")
+
+
+

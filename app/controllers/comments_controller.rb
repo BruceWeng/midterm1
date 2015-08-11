@@ -2,12 +2,31 @@ class CommentsController < ApplicationController
 before_action :set_message
 before_action :authenticate_user!
 
+def edit
+  @comment = @message.comments.find(params[:id])
+  respond_to do |format|
+    format.js
+    format.html
+  end
+end
+
 def create
   @comment = @message.comments.build(comment_params)
   @comment.user = current_user
   @comment.save!
   redirect_to :back
 end
+
+def update
+  @comment = @message.comments.find(params[:id])
+  @comment.update(comment_params)
+  respond_to do |format|
+    format.js
+    format.html
+  end
+
+end
+
 
 def destroy
   @comment = current_user.comments.find(params[:id])
