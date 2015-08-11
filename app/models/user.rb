@@ -13,6 +13,7 @@ class User < ActiveRecord::Base
 #test1
 #test2
 #test3
+#test4
 #test2-1
 #test2-2
 end
