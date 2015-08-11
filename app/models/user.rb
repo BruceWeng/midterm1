@@ -16,6 +16,7 @@ class User < ActiveRecord::Base
 #test4
 #test rebase 1
 #test rebase 2
+#test rebase 3
 #test2-1
 #test2-2
 #test2-3
